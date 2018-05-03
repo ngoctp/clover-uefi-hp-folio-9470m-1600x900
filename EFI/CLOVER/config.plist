@@ -122,7 +122,18 @@
 			<key>EnableC6</key>
 			<true/>
 			<key>Generate</key>
-			<true/>
+			<dict>
+				<key>APLF</key>
+				<true/>
+				<key>APSN</key>
+				<true/>
+				<key>CStates</key>
+				<true/>
+				<key>PStates</key>
+				<true/>
+				<key>PluginType</key>
+				<true/>
+			</dict>
 			<key>PluginType</key>
 			<integer>1</integer>
 		</dict>
@@ -239,7 +250,7 @@
 			<key>Entries</key>
 			<true/>
 			<key>Legacy</key>
-			<true/>
+			<false/>
 			<key>Linux</key>
 			<false/>
 			<key>Tool</key>
@@ -252,6 +263,8 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
+		<key>DualLink</key>
+		<integer>1</integer>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
@@ -268,9 +281,9 @@
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
-		<key>AppleRTC</key>
+		<key>AppleIntelCPUPM</key>
 		<true/>
-		<key>AsusAICPUPM</key>
+		<key>AppleRTC</key>
 		<true/>
 		<key>Debug</key>
 		<false/>
@@ -282,12 +295,12 @@
 		</array>
 		<key>KernelCpu</key>
 		<false/>
-		<key>KernelHaswellE</key>
-		<false/>
 		<key>KernelLapic</key>
 		<true/>
 		<key>KernelPm</key>
 		<true/>
+		<key>KernelXCPM</key>
+		<false/>
 		<key>KextsToPatch</key>
 		<array>
 			<dict>
@@ -295,60 +308,92 @@
 				<string>HDMI-video, 64MB BIOS, HD4000 0x01660004 #1 of 2</string>
 				<key>Disabled</key>
 				<false/>
+				<key>Find</key>
+				<data>
+				BABmAQEDAQEAAAAC
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleIntelFramebufferCapri</string>
-				<key>Find</key>
-				<data>BABmAQEDAQEAAAAC</data>
 				<key>Replace</key>
-				<data>BABmAQECBAIAAAAE</data>
+				<data>
+				BABmAQECBAIAAAAE
+				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-video, 64MB BIOS, HD4000 0x01660004 #2 of 2</string>
 				<key>Disabled</key>
 				<false/>
+				<key>Find</key>
+				<data>
+				MAIAAAAAAAABAAAAQAAAAAAAAAABAAAAQAAAAAAAAAAB
+				AAAAQAAAAAAAAAAAAAAA
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleIntelFramebufferCapri</string>
-				<key>Find</key>
-				<data>MAIAAAAAAAABAAAAQAAAAAAAAAABAAAAQAAAAAAAAAABAAAAQAAAAAAAAAAAAAAA</data>
 				<key>Replace</key>
-				<data>MAIAAAIFAAAABAAABwQAAAMEAAAABAAAgQAAAAQGAAAABAAAgQAAAAAAAAAAAgAR</data>
+				<data>
+				MAIAAAIFAAAABAAABwQAAAMEAAAABAAAgQAAAAQGAAAA
+				BAAAgQAAAAAAAAAAAgAR
+				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-audio HD4000 0x01660004, port 0205</string>
 				<key>Disabled</key>
 				<true/>
+				<key>Find</key>
+				<data>
+				AgUAAAAEAAAHBAAA
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleIntelFramebufferCapri</string>
-				<key>Find</key>
-				<data>AgUAAAAEAAAHBAAA</data>
 				<key>Replace</key>
-				<data>AgUAAAAIAAAGAAAA</data>
+				<data>
+				AgUAAAAIAAAGAAAA
+				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-audio HD4000 0x01660004, port 0304</string>
 				<key>Disabled</key>
 				<true/>
+				<key>Find</key>
+				<data>
+				AwQAAAAEAACBAAAA
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleIntelFramebufferCapri</string>
-				<key>Find</key>
-				<data>AwQAAAAEAACBAAAA</data>
 				<key>Replace</key>
-				<data>AwQAAAAIAAAGAAAA</data>
+				<data>
+				AwQAAAAIAAAGAAAA
+				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-audio HD4000 0x01660004, port 0406</string>
 				<key>Disabled</key>
 				<true/>
+				<key>Find</key>
+				<data>
+				BAYAAAAEAACBAAAA
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleIntelFramebufferCapri</string>
-				<key>Find</key>
-				<data>BAYAAAAEAACBAAAA</data>
 				<key>Replace</key>
-				<data>BAYAAAAIAAAGAAAA</data>
+				<data>
+				BAYAAAAIAAAGAAAA
+				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -359,6 +404,8 @@
 				<data>
 				RiV1VCUwNHgA
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleBacklight</string>
 				<key>Replace</key>
@@ -375,6 +422,8 @@
 				<data>
 				AEFQUExFIFNTRAA=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.iokit.IOAHCIBlockStorage</string>
 				<key>Replace</key>
@@ -384,20 +433,56 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>0x11d4198a to zero</string>
+				<string>Expect 2 matches</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
-				ihnUEQ==
+				gxnUEQ==
 				</data>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>AppleHDA</string>
 				<key>Replace</key>
 				<data>
 				AAAAAA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Expect 2 matches</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				hBnUEQ==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>
+				AAAAAA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Expect 2 matches</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				ixnUEQ==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>
+				4HYdEQ==
 				</data>
 			</dict>
 			<dict>
@@ -409,11 +494,67 @@
 				<data>
 				AQAAdSU=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>IOGraphicsFamily</string>
 				<key>Replace</key>
 				<data>
 				AQAA6yU=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Broadcom 43224 whitelist</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				TWFjLTJFNkZBQjk2NTY2RkU1OEM=
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>AirPortBrcm4360</string>
+				<key>Replace</key>
+				<data>
+				TWFjLTJFNkZBQjk2NTY2RkU1OEM=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Broadcom 5Ghz US</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				QYP8/3QsSA==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>AirPortBrcm4360</string>
+				<key>Replace</key>
+				<data>
+				ZscGVVPrKw==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Handoff Fix</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				SIX/dEdIiwc=
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IOBluetoothFamily</string>
+				<key>Replace</key>
+				<data>
+				Qb4PAAAA60Q=
 				</data>
 			</dict>
 		</array>
@@ -428,37 +569,45 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>05/10/12</string>
+		<string>02/02/2018</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBA51.88Z.00EF.B00.1205221442</string>
+		<string>MBP91.88Z.00D9.B00.1802021100</string>
 		<key>Board-ID</key>
-		<string>Mac-2E6FAB96566FE58C</string>
+		<string>Mac-6F01561E16C75D06</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
+		<key>BoardSerialNumber</key>
+		<string>C02231700GUDNJJ8C</string>
 		<key>BoardType</key>
 		<integer>10</integer>
+		<key>BoardVersion</key>
+		<string>1.0</string>
 		<key>ChassisAssetTag</key>
-		<string>Air-Enclosure</string>
+		<string>MacBook-Aluminum</string>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
-		<string>0x10</string>
+		<string>0x0A</string>
 		<key>Family</key>
-		<string>MacBook Air</string>
+		<string>MacBook Pro</string>
+		<key>FirmwareFeatures</key>
+		<string>0xC00DE137</string>
+		<key>FirmwareFeaturesMask</key>
+		<string>0xFF1FFF3F</string>
 		<key>LocationInChassis</key>
 		<string>Part Component</string>
 		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
 		<key>Mobile</key>
 		<true/>
+		<key>PlatformFeature</key>
+		<string>0xFFFF</string>
 		<key>ProductName</key>
-		<string>MacBookAir5,2</string>
+		<string>MacBookPro9,2</string>
 		<key>SerialNumber</key>
-		<string>C02LD6QNDRVC</string>
-		<key>Trust</key>
-		<false/>
+		<string>C02J5QNEDTY3</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
