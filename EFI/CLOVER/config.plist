@@ -198,6 +198,11 @@
 	</dict>
 	<key>Devices</key>
 	<dict>
+		<key>Audio</key>
+		<dict>
+			<key>ResetHDA</key>
+			<true/>
+		</dict>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
