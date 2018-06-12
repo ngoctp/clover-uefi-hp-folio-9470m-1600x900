@@ -257,7 +257,7 @@
 			<true/>
 		</dict>
 		<key>ScreenResolution</key>
-		<string>1024x768</string>
+		<string>1600x900</string>
 		<key>Theme</key>
 		<string>BGM</string>
 	</dict>
@@ -417,7 +417,7 @@
 				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				AEFQUExFIFNTRAA=
@@ -489,7 +489,7 @@
 				<key>Comment</key>
 				<string>Boot graphics glitch, 10.12.dp1 (credit denskop)</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				AQAAdSU=
