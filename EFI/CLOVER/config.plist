@@ -50,10 +50,37 @@
 			<key>Debug</key>
 			<false/>
 			<key>DropOEM_DSM</key>
-			<false/>
+			<dict>
+				<key>ATI</key>
+				<false/>
+				<key>Firewire</key>
+				<false/>
+				<key>HDA</key>
+				<false/>
+				<key>HDMI</key>
+				<false/>
+				<key>IDE</key>
+				<false/>
+				<key>IntelGFX</key>
+				<false/>
+				<key>LAN</key>
+				<false/>
+				<key>LPC</key>
+				<false/>
+				<key>NVidia</key>
+				<false/>
+				<key>SATA</key>
+				<false/>
+				<key>SmBUS</key>
+				<false/>
+				<key>USB</key>
+				<true/>
+				<key>WIFI</key>
+				<false/>
+			</dict>
 			<key>Fixes</key>
 			<dict>
-				<key>NewWay_80000000</key>
+				<key>FixHDA</key>
 				<true/>
 			</dict>
 			<key>Patches</key>
@@ -175,7 +202,7 @@
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
-		<string>macOS</string>
+		<string>macos</string>
 		<key>Legacy</key>
 		<string>LegacyBiosDefault</string>
 		<key>Log</key>
@@ -187,7 +214,7 @@
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
@@ -264,7 +291,7 @@
 		<key>ScreenResolution</key>
 		<string>1600x900</string>
 		<key>Theme</key>
-		<string>BGM</string>
+		<string>embedded</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
